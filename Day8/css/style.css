@@ -1,0 +1,127 @@
+.heading {
+    background-image: linear-gradient(to right, orange, cyan);
+    text-align: center;
+    font-size: 30px;
+    /* margin-top: -40px;
+    margin-right: -5px;
+    margin-left: -6px;
+    height: 150px; */
+    padding-top: 30px;
+    padding-bottom: 1px;
+    color: whitesmoke;
+    font-family: calibri;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-bottom: 2px solid black;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    /* height: calc(50vh - 15px); */
+    /* padding-top: 5px;
+    margin: 5px; */
+    padding: 10px;
+}
+
+.card {
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin: 15px;
+    /* margin-right: 20px; */
+    text-align: center;
+    border-radius: 10px;
+    flex: 0 0 calc(33.33% - 40px);
+    max-width: calc(33.33% -40px);
+}
+
+.card h3,
+.card p {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .card {
+        flex: 0 0 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (max-width:480px) {
+    .card {
+        flex: 0 0 calc(100% - 30px);
+        max-width: calc(100% - 30px);
+    }
+}
+
+.social h3 {
+    text-align: center;
+}
+
+.social-media {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    /* margin: 0 10px; */
+    margin: 5px;
+}
+
+.social-media img {
+    width: 60px;
+    height: 60px;
+}
+
+@media (max-width: 767px) {
+    .social-media {
+        flex-wrap: wrap;
+    }
+
+    .social-media a {
+        flex: 0 0 25%;
+    }
+}
+
+
+.footer {
+    background-image: linear-gradient(to right, orange, cyan);
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}

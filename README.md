@@ -1,4 +1,4 @@
-##Description Git
+###Description Git
 <br>
 
 **git config --list = buat ngecheck username+email yang terkonfigurasi di git** <br>
