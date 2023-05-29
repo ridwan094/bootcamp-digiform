@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Bagian Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(135deg, #ff6b6b, #355c7d);
+    padding: 10px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-logo-text {
+    font-weight: bold;
+}
+
+/* bagian navbar-search */
+.navbar-search {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.navbar-search input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.navbar-search button[type="submit"] {
+    padding: 5px 10px;
+    background-color: transparent;
+    /* border-radius: 5px; */
+    border: none;
+    /* background-color: #ccc;
+    color: #fff; */
+    cursor: pointer;
+}
+
+.navbar-search button[type="submit"] img {
+    width: 20px;
+}
+
+/* bagian navbar toggle */
+.navbar-theme {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #ccc;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.toggle-theme-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-theme-label .light-mode-icon,
+.toggle-theme-label .dark-mode-icon {
+    width: 15px;
+    height: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#dark-mode-toggle:checked+.toggle-theme-label .light-mode-icon {
+    opacity: 0;
+}
+
+#dark-mode-toggle:checked+.toggle-theme-label .dark-mode-icon {
+    opacity: 1;
+}
+
+/* isi content */
+.content {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 20px;
+}
+
+.content.dark {
+    background-color: #444;
+    color: #fff;
+}
+
+
+/* layout kiri */
+.left-column {
+    flex-basis: 40%;
+    padding: 10px;
+}
+
+.left-column h1 {
+    margin: 0;
+    font-size: 64px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: left;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    white-space: nowrap;
+    padding: 10px;
+    margin-left: -20px;
+    align-self: flex-start;
+    position: absolute;
+}
+
+.left-column .card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    margin-left: 60px;
+    position: relative;
+}
+
+.left-column .card h3.card-name {
+    text-align: left;
+    margin: 0;
+    font-size: 32px;
+    margin: 10px;
+}
+
+
+.left-column .card-location {
+    font-size: 21px;
+}
+
+.left-column .card p {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+
+.left-column .card p {
+    font-size: 16px;
+}
+
+.left-column .card .danugans {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-container .icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.icon-name {
+    font-size: 12px;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-container .card {
+    flex-basis: calc(33.33% - 20px);
+    margin-right: 20px;
+}
+
+
+/* layout kanan */
+.right-column {
+    flex-basis: 60%;
+    padding: 10px;
+}
+
+.card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    height: auto;
+}
+
+
+.card h3.card-name {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 300px;
+    margin-bottom: 10px;
+}
+
+@media (max-width:768px) {
+    .left-column .card h3.card-name {
+        font-size: 16px;
+    }
+
+    .content {
+        flex-wrap: wrap;
+    }
+
+    .left-column,
+    .right-column {
+        flex-basis: 100%;
+    }
+
+    .left-column h1 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-column .card h3.card-name {
+        font-size: 14px;
+    }
+}
